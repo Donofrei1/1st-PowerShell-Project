@@ -3075,5 +3075,5 @@ UserPrincipalName : AdatumAdmin@Adatum.com )
          Write-Host "Department: $($user.Department)"
          }
 
-
+# synk test 
 
