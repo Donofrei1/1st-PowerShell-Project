@@ -49,3 +49,6 @@ $randomUsers | Select-Object DisplayName, WhenCreated, department | Format-Table
     Write-Host $_.DisplayName -ForegroundColor Red        Write-Host "`tDepartment: " -NoNewline
     Write-Host $_.Department -ForegroundColor Green        Write-Host
     }
+
+
+
