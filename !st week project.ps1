@@ -1,10 +1,8 @@
 Get-EventLog -LogName System -Newest 3
-Get-EventLog -LogName application -Newest 3
 
-# the list of employees:
 PS C:\Users\Administrator.ADATUM> Get-AdUser -Filter * -Properties DisplayName
 
-
+$users = @(
 DisplayName       : 
 DistinguishedName : CN=Administrator,CN=Users,DC=Adatum,DC=com
 Enabled           : True
@@ -3060,12 +3058,22 @@ GivenName         : AdatumAdmin
 Name              : AdatumAdmin
 ObjectClass       : user
 ObjectGUID        : c5d51b6b-8a17-438b-9741-f595d1ec9abd
-SamAccountName    : AdatumAdmin
+SamAccountName    : AdatumAdminT
 SID               : S-1-5-21-913749354-169946239-1665692169-1360
 Surname           : 
-UserPrincipalName : AdatumAdmin@Adatum.com
+UserPrincipalName : AdatumAdmin@Adatum.com )
 
 
 
 
-PS C:\Users\Administrator.ADATUM> 
+ # Retrieve all users and their departments
+ $users = Get-AdUser -Filter * -Properties DisplayName, Department
+
+ # Loop through each user and display their name and department
+ foreach ($user in $users) {
+     Write-Host "User: $($user.DisplayName)"
+         Write-Host "Department: $($user.Department)"
+         }
+
+
+
