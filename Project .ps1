@@ -50,5 +50,6 @@ $randomUsers | Select-Object DisplayName, WhenCreated, department | Format-Table
     Write-Host $_.Department -ForegroundColor Green        Write-Host
     }
 
+# project script 
 
 
