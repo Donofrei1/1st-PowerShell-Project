@@ -54,3 +54,4 @@ $randomUsers | Select-Object DisplayName, WhenCreated, department | Format-Table
 # synked ripository 
 
 
+# add a new function to the script
